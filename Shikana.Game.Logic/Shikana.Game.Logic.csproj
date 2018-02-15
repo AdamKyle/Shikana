@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Skikana.Cards">
+      <HintPath>..\Skikana.Cards\bin\Debug\netcoreapp2.0\Skikana.Cards.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
