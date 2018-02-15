@@ -6,4 +6,5 @@ install:
   - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
 script:
   - msbuild Shikana.sln
-  - mono ./testrunner/NUnit.Runners.3.8.0/tools/nunit3-runner.exe ./Shikana.Cards.Test/bin/Release/Shikana.Cards.Test.dll
+  - ls ./testrunner
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./Shikana.Cards.Test/bin/Release/Shikana.Cards.Test.dll
