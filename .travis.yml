@@ -1,7 +1,7 @@
 language: csharp
 solution: Shikana.sln
 install:
-  - nuget restore Shikana.sln
+  - dotnet restore Shikana.sln
   - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
 script:
   - msbuild Shikana.sln
