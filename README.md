@@ -16,3 +16,9 @@ Each deck comes with two jokers. Making a total of 54 cards.
 ### Shikana.Cards.Test
 
 A series of tests to run for the cards.
+
+## Shikana.Game.logic
+
+This library is responsible for containing all the game logic for the game
+of Shikana. This includes Players, PlayPiles, StoragePiles, Dealing and the
+Discard Pile.
