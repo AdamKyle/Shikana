@@ -7,4 +7,4 @@ install:
 script:
   - msbuild Shikana.sln
   - ls ./testrunner/
-  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./Shikana.Cards.Test/bin/Release/Shikana.Cards.Test.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./Shikana.Cards.Test/bin/Release/Shikana.Cards.Test.dll
