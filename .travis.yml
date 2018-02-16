@@ -5,3 +5,5 @@ script:
   - dotnet restore
   - dotnet build Shikana.Cards.Test/
   - dotnet test Shikana.Cards.Test/
+  - dotnet build Shikana.Game.Logic.Test/
+  - dotnet test Shikana.Game.Logic.Test/
