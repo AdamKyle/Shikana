@@ -1,10 +1,10 @@
-﻿using Skikana.Cards.CardEnums;
+﻿using Shikana.Cards.CardEnums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Skikana.Cards
+namespace Shikana.Cards
 {
     public class Deck
     {

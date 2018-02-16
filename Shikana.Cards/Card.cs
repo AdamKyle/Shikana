@@ -1,7 +1,7 @@
-﻿using Skikana.Cards.CardEnums;
+﻿using Shikana.Cards.CardEnums;
 using System;
 
-namespace Skikana.Cards
+namespace Shikana.Cards
 {
     public class Card
     {

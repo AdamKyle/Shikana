@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Skikana.Cards">
-      <HintPath>..\Skikana.Cards\bin\Debug\netcoreapp2.0\Skikana.Cards.dll</HintPath>
+    <Reference Include="Shikana.Cards">
+      <HintPath>..\Shikana.Cards\bin\Debug\netcoreapp2.0\Shikana.Cards.dll</HintPath>
     </Reference>
   </ItemGroup>
 
