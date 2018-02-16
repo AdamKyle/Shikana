@@ -1,6 +1,6 @@
 ﻿using System;
-using Skikana.Cards;
-using Skikana.Cards.CardEnums;
+using Shikana.Cards;
+using Shikana.Cards.CardEnums;
 using System.Collections.Generic;
 using System.Linq;
 

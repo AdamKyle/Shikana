@@ -1,8 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
-using Skikana.Cards.CardEnums;
+using Shikana.Cards.CardEnums;
 
-namespace Skikana.Cards.Test
+namespace Shikana.Cards.Test
 {
     [TestFixture]
     public class CardTest

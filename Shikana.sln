@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skikana.Cards", "Skikana.Cards\Skikana.Cards.csproj", "{8F4068C2-4DD1-4BA0-83E4-81C3A51D184B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shikana.Cards", "Skikana.Cards\Shikana.Cards.csproj", "{8F4068C2-4DD1-4BA0-83E4-81C3A51D184B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skikana.Cards.Test", "Skikana.Cards.Test\Skikana.Cards.Test.csproj", "{3F2D2364-1C60-44E6-9A05-DC78EDAA25BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shikana.Cards.Test", "Skikana.Cards.Test\Shikana.Cards.Test.csproj", "{3F2D2364-1C60-44E6-9A05-DC78EDAA25BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shikana.Game.Logic", "Shikana.Game.Logic\Shikana.Game.Logic.csproj", "{8BE77AE9-DB20-43A6-B307-00326B1A63AC}"
 EndProject

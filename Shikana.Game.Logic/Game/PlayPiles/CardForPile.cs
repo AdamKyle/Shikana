@@ -1,4 +1,4 @@
-﻿using Skikana.Cards;
+﻿using Shikana.Cards;
 using System;
 using System.Collections.Generic;
 using System.Text;

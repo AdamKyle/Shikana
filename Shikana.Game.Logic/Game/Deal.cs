@@ -1,5 +1,5 @@
 ﻿using System;
-using Skikana.Cards;
+using Shikana.Cards;
 using System.Collections.Generic;
 using System.Linq;
 using Shikana.Game.Logic.Players;

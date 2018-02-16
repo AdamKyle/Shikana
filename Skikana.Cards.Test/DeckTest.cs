@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Skikana.Cards.Test
+namespace Shikana.Cards.Test
 {
     [TestFixture]
     class DeckTest

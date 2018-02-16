@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Skikana.Cards.CardEnums
+namespace Shikana.Cards.CardEnums
 {
     public enum Joker
     {
