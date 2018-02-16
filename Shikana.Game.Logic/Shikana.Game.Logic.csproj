@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Shikana.Cards">
-      <HintPath>..\Shikana.Cards\bin\Debug\netcoreapp2.0\Shikana.Cards.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Shikana.Cards\Shikana.Cards.csproj" />
   </ItemGroup>
 
 </Project>
