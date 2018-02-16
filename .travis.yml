@@ -1,9 +1,7 @@
 language: csharp
-solution: Shikana.sln
 dotnet: 2.0.0
-install:
-  - dotnet restore Shikana.sln
-  - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner
+mono: none
 script:
-  - msbuild /p:Configuration=Release Shikana.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./Shikana.Cards.Test/bin/Release/netcoreapp2.0/Shikana.Cards.Test.dll
+  - dotnet restore
+  - dotnet build Shikana.Cards.Test/
+  - dotnet test Shikana.Cards.Test/
