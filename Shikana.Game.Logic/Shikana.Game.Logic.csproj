@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Reference Include="Shikana.Cards">
-      <HintPath>..\Skikana.Cards\bin\Debug\netcoreapp2.0\Shikana.Cards.dll</HintPath>
+      <HintPath>..\Shikana.Cards\bin\Debug\netcoreapp2.0\Shikana.Cards.dll</HintPath>
     </Reference>
   </ItemGroup>
 
