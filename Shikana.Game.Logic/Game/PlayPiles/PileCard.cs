@@ -1,13 +1,11 @@
 ﻿using Shikana.Cards;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Shikana.Game.Logic.Game.PlayPiles
 {
-    class CardForPile
+    class PileCard
     {
-        public CardForPile(Card card, PlayPile pile)
+        public PileCard(Card card, PlayPile pile)
         {
             this.Card = card;
             this.Pile = pile;

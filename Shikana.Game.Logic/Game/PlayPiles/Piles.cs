@@ -6,15 +6,15 @@ using System.Linq;
 
 namespace Shikana.Game.Logic.Game.PlayPiles
 {
-    class PlayPiles
+    class Piles
     {
-        public PlayPiles()
+        public Piles()
         {
-            List<CardForPile> pile = new List<CardForPile>();
+            List<PileCard> pile = new List<PileCard>();
             this.CardForPile = pile;
         }
 
-        public void addCardToPile(CardForPile cardForPile)
+        public void addCardToPile(PileCard cardForPile)
         {
             this.CardForPile.Add(cardForPile);
         }
@@ -38,7 +38,7 @@ namespace Shikana.Game.Logic.Game.PlayPiles
 
         public DiscardPile getPileWithAKing(DiscardPile discardPile)
         {
-            List<CardForPile> cardsInPile = new List<CardForPile>();
+            List<PileCard> cardsInPile = new List<PileCard>();
             for (var i = 0; i < this.CardForPile.Count; i++)
             {
                 var cardForPile = this.CardForPile[i].Card;
@@ -48,7 +48,7 @@ namespace Shikana.Game.Logic.Game.PlayPiles
                 if (cardForPile.CardValue == cardValue)
                 {
                     var pile = this.CardForPile[i].Pile;
-                    List<CardForPile> cardsFound = this.CardForPile.Where(c => c.Pile == pile).ToList();
+                    List<PileCard> cardsFound = this.CardForPile.Where(c => c.Pile == pile).ToList();
                     this.CardForPile.RemoveAll(c => c.Pile == pile);
 
                     return createDiscardPile(cardsFound, discardPile);
@@ -58,9 +58,9 @@ namespace Shikana.Game.Logic.Game.PlayPiles
             return null;
         }
 
-        public List<CardForPile> CardForPile { get; private set; }
+        public List<PileCard> CardForPile { get; private set; }
 
-        protected DiscardPile createDiscardPile(List<CardForPile> cardsForDiscard, DiscardPile discardPile)
+        protected DiscardPile createDiscardPile(List<PileCard> cardsForDiscard, DiscardPile discardPile)
         {
             List<Card> cardsToDiscrad = new List<Card>();
 
