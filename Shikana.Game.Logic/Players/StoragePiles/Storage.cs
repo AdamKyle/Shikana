@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Shikana.Game.Logic.Players.StoragePiles
 {
-    class Storage
+    public class Storage
     {
         public Storage(Card card, Piles pile)
         {

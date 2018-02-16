@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Shikana.Game.Logic.Game.PlayPiles
 {
-    class Piles
+    public class Piles
     {
         public Piles()
         {

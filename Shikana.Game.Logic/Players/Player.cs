@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Shikana.Game.Logic.Players
 {
-    class Player
+    public class Player
     {
         public void playersHand(List<Card> cards)
         {

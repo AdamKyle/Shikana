@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Shikana.Game.Logic.Game
 {
-    class DiscardPile
+    public class DiscardPile
     {
         public DiscardPile()
         {

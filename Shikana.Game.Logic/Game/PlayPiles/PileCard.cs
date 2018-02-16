@@ -3,7 +3,7 @@ using System;
 
 namespace Shikana.Game.Logic.Game.PlayPiles
 {
-    class PileCard
+    public class PileCard
     {
         public PileCard(Card card, PlayPile pile)
         {

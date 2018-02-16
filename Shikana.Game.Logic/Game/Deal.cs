@@ -6,7 +6,7 @@ using Shikana.Game.Logic.Players;
 
 namespace Shikana.Game.Logic.Game
 {
-    class Deal
+    public class Deal
     {
         public Deal(List<Card> deck)
         {
