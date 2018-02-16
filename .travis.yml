@@ -5,6 +5,6 @@ install:
   - dotnet restore Shikana.sln
   - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
 script:
-  - msbuild Shikana.sln
-  - ls ./Shikana.Cards.Test/bin/
+  - msbuild Shikana.sln /t:Build /p:Configuration=Release
+  - ls ./Shikana.Cards.Test/bin/Debug
   - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./Shikana.Cards.Test/bin/Release/Shikana.Cards.Test.dll
