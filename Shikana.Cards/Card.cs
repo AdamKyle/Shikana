@@ -1,5 +1,6 @@
 ﻿using Shikana.Cards.CardEnums;
 using System;
+using System.Collections.Generic;
 
 namespace Shikana.Cards
 {
@@ -35,6 +36,11 @@ namespace Shikana.Cards
         protected bool validateCardValue(CardValue value)
         {
             return Enum.IsDefined(typeof(CardValue), value);
+        }
+
+        public static implicit operator Card(List<List<Card>> v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

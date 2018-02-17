@@ -9,6 +9,10 @@ namespace Shikana.Game.Logic.Players
 {
     public class Player
     {
+        public Player()
+        {
+            this.Storage = new Storage();
+        }
         public void playersHand(List<Card> cards)
         {
             this.Hand = cards;
@@ -93,11 +97,7 @@ namespace Shikana.Game.Logic.Players
 
         public void storeCard(Card card, Piles pile)
         {
-            Storage cardPile = new Storage(card, pile);
-
-            List<Storage> storage = new List<Storage>();
-            storage.Add(cardPile);
-            this.StoragePiles = storage;
+            this.Storage.addCardToPile(card, pile);
         }
 
         public List<Card> Hand { get; private set; }
@@ -106,6 +106,6 @@ namespace Shikana.Game.Logic.Players
 
         public List<Card> PlayPileTopCard { get; private set; }
 
-        public List<Storage> StoragePiles { get; private set; }
+        public Storage Storage { get; private set; }
     }
 }

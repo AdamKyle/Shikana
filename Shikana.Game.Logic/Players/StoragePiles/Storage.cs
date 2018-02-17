@@ -6,10 +6,29 @@ namespace Shikana.Game.Logic.Players.StoragePiles
 {
     public class Storage
     {
-        public Storage(Card card, Piles pile)
+
+        public Storage()
         {
-            this.Card = card;
-            this.Pile = pile;
+            this.Pile = new List<List<Card>>();
+
+            // Four Piles for storage
+            this.Pile.Add(new List<Card>());
+            this.Pile.Add(new List<Card>());
+            this.Pile.Add(new List<Card>());
+            this.Pile.Add(new List<Card>());
+        }
+
+        public void addCardToPile(Card card, Piles pile)
+        {
+            if (validatePile(pile))
+            {
+                int index = (int)pile;
+                this.Pile[index].Add(card);
+            } else
+            {
+                throw new Exception("Storage pile is not valid");
+            }
+
         }
 
         public bool validatePile(Piles pile)
@@ -20,6 +39,6 @@ namespace Shikana.Game.Logic.Players.StoragePiles
 
         public Card Card { get; private set; }
 
-        public Piles Pile { get; private set; }
+        public List<List<Card>> Pile { get; private set; }
     }
 }
