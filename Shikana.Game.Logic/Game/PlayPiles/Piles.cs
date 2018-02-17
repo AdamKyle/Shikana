@@ -16,7 +16,14 @@ namespace Shikana.Game.Logic.Game.PlayPiles
 
         public void addCardToPile(PileCard cardForPile)
         {
-            this.CardForPile.Add(cardForPile);
+            if (cardForPile.validatePile(cardForPile.Pile))
+            {
+                this.CardForPile.Add(cardForPile);
+            } else
+            {
+                throw new Exception("he pile to put the card does not exist.");
+            }
+            
         }
 
         public bool checkIfAnyPileHasAKing()
@@ -43,9 +50,7 @@ namespace Shikana.Game.Logic.Game.PlayPiles
             {
                 var cardForPile = this.CardForPile[i].Card;
 
-                var cardValue = (CardValue)(13);
-
-                if (cardForPile.CardValue == cardValue)
+                if (cardForPile.CardValue == (CardValue)13)
                 {
                     var pile = this.CardForPile[i].Pile;
                     List<PileCard> cardsFound = this.CardForPile.Where(c => c.Pile == pile).ToList();
