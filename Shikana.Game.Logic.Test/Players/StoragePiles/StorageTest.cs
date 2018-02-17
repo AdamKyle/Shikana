@@ -12,7 +12,7 @@ namespace Shikana.Game.Logic.Test.Players.StoragePiles
         {
             Deck deck = new Deck();
             var createdDeck = deck.createDeck();
-            Storage cardForPile = new Storage(createdDeck[0], (Piles)1);
+            Storage cardForPile = new Storage(createdDeck[0], (Piles)0);
 
             Assert.True(cardForPile.validatePile(cardForPile.Pile));
         }

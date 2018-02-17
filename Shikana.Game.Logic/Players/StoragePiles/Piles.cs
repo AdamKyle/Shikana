@@ -6,9 +6,9 @@ namespace Shikana.Game.Logic.Players.StoragePiles
 {
     public enum Piles
     {
-        PileA = 1,
-        PileB = 2,
-        PileC = 3,
-        PileD = 4
+        PileA,
+        PileB,
+        PileC,
+        PileD
     }
 }

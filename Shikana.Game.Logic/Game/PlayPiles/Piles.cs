@@ -21,7 +21,7 @@ namespace Shikana.Game.Logic.Game.PlayPiles
                 this.CardForPile.Add(cardForPile);
             } else
             {
-                throw new Exception("he pile to put the card does not exist.");
+                throw new Exception("The pile to put the card does not exist.");
             }
             
         }

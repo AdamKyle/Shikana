@@ -61,7 +61,7 @@ namespace Shikana.Game.Logic.Test.Players
 
             int oneCardValueHigher = (int)player.PlayPileTopCard[0].CardValue + 1;
 
-            player.addCardToTopCard(new Card((CardSuite)1, (CardValue)oneCardValueHigher));
+            player.addCardToTopCard(new Card((CardSuite)0, (CardValue)oneCardValueHigher));
 
             Assert.AreEqual(2, player.PlayPileTopCard.Count);
             Assert.AreEqual(19, player.PlayPile.Count);
@@ -119,7 +119,7 @@ namespace Shikana.Game.Logic.Test.Players
                 Player player = new Player();
                 player.playPile(createdDeck.GetRange(0, 20));
 
-                player.addCardToTopCard(new Card((Joker)1));
+                player.addCardToTopCard(new Card((Joker)0));
             }
 
 

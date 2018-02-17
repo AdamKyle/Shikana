@@ -12,7 +12,7 @@ namespace Shikana.Game.Logic.Test.Game.PlayPiles
         {
             Deck deck = new Deck();
             var createdDeck = deck.createDeck();
-            PileCard cardForPile = new PileCard(createdDeck[0], (PlayPile)1);
+            PileCard cardForPile = new PileCard(createdDeck[0], (PlayPile)0);
 
             Assert.True(cardForPile.validatePile(cardForPile.Pile));
         }
