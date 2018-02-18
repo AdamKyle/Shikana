@@ -32,22 +32,10 @@ namespace Shikana.Game.Logic.Game.PlayPiles
 
                 if (cards.Count > 0)
                 {
-                    if ((int)card.CardValue - (int)cards[cards.Count - 1].CardValue == 1)
-                    {
-                        cards.Add(card);
-                    } else
-                    {
-                        throw new InvalidCardValueSizeDifferenceException(card, cards[cards.Count - 1]);
-                    }
+                    addCardToExistingPile(card, cards);
                 } else
                 {
-                    if (card.CardValue == (CardValue)1)
-                    {
-                        cards.Add(card);
-                    } else
-                    {
-                        throw new MustBeAnAceException(card);
-                    }
+                    startAPlayPile(card, cards);
                 }
             } else
             {
@@ -115,6 +103,30 @@ namespace Shikana.Game.Logic.Game.PlayPiles
 
             discardPile.addCardsToDiscardPile(cardsToDiscrad);
             return discardPile;
+        }
+
+        protected void addCardToExistingPile(Card card, List<Card> cards)
+        {
+            if ((int)card.CardValue - (int)cards[cards.Count - 1].CardValue == 1)
+            {
+                cards.Add(card);
+            }
+            else
+            {
+                throw new InvalidCardValueSizeDifferenceException(card, cards[cards.Count - 1]);
+            }
+        }
+
+        protected void startAPlayPile(Card card, List<Card> cards)
+        {
+            if (card.CardValue == (CardValue)1)
+            {
+                cards.Add(card);
+            }
+            else
+            {
+                throw new MustBeAnAceException(card);
+            }
         }
     }
 }
