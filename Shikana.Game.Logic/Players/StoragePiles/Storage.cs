@@ -26,7 +26,7 @@ namespace Shikana.Game.Logic.Players.StoragePiles
                 this.Pile[index].Add(card);
             } else
             {
-                throw new Exception("Storage pile is not valid");
+                throw new InvalidStoragePileException((int)pile);
             }
 
         }

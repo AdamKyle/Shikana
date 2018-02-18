@@ -2,7 +2,7 @@
 
 namespace Shikana.Game.Logic.Game.PlayPiles
 {
-    public enum PlayPile
+    public enum PlayablePiles
     {
         PileA,
         PileB,

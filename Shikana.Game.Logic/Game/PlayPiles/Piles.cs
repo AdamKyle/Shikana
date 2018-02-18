@@ -10,34 +10,71 @@ namespace Shikana.Game.Logic.Game.PlayPiles
     {
         public Piles()
         {
-            List<PileCard> pile = new List<PileCard>();
-            this.CardForPile = pile;
+            this.PlayPiles = new List<List<Card>>();
+
+            // Eight Play piles
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+            this.PlayPiles.Add(new List<Card>());
+
         }
 
-        public void addCardToPile(PileCard cardForPile)
+        public void addCardToPile(Card card, PlayablePiles pile)
         {
-            if (cardForPile.validatePile(cardForPile.Pile))
+            if (validatePile(pile))
             {
-                this.CardForPile.Add(cardForPile);
+                var cards = this.PlayPiles[(int)pile];
+
+                if (cards.Count > 0)
+                {
+                    if ((int)card.CardValue - (int)cards[cards.Count - 1].CardValue == 1)
+                    {
+                        cards.Add(card);
+                    } else
+                    {
+                        throw new InvalidCardValueSizeDifferenceException(card, cards[cards.Count - 1]);
+                    }
+                } else
+                {
+                    if (card.CardValue == (CardValue)1)
+                    {
+                        cards.Add(card);
+                    } else
+                    {
+                        throw new MustBeAnAceException(card);
+                    }
+                }
             } else
             {
-                throw new Exception("The pile to put the card does not exist.");
+                throw new InvalidPlayPileException((int)pile);
             }
-            
+        }
+
+        public bool validatePile(PlayablePiles pile)
+        {
+            return Enum.IsDefined(typeof(PlayablePiles), pile);
         }
 
         public bool checkIfAnyPileHasAKing()
         {
-            var piles = this.CardForPile;
-            for (var i = 0; i < this.CardForPile.Count; i++)
+            for (var i = 0; i < this.PlayPiles.Count; i++)
             {
-                var cardForPile = this.CardForPile[i].Card;
-                var cardValue = (CardValue)13;
-
-                if (cardForPile.CardValue == cardValue)
+                for (var j = 0; j < this.PlayPiles[i].Count; j++)
                 {
-                    return true;
+                    var cardForPile = this.PlayPiles[i][j];
+                    var cardValue = (CardValue)13;
+
+                    if (cardForPile.CardValue == cardValue)
+                    {
+                        return true;
+                    }
                 }
+
             }
 
             return false;
@@ -45,33 +82,35 @@ namespace Shikana.Game.Logic.Game.PlayPiles
 
         public DiscardPile getPileWithAKing(DiscardPile discardPile)
         {
-            List<PileCard> cardsInPile = new List<PileCard>();
-            for (var i = 0; i < this.CardForPile.Count; i++)
+            for (var i = 0; i < this.PlayPiles.Count; i++)
             {
-                var cardForPile = this.CardForPile[i].Card;
-
-                if (cardForPile.CardValue == (CardValue)13)
+                for (var j = 0; j < this.PlayPiles[i].Count; j++)
                 {
-                    var pile = this.CardForPile[i].Pile;
-                    List<PileCard> cardsFound = this.CardForPile.Where(c => c.Pile == pile).ToList();
-                    this.CardForPile.RemoveAll(c => c.Pile == pile);
+                    Card cardForPile = this.PlayPiles[i][j];
 
-                    return createDiscardPile(cardsFound, discardPile);
+                    if (cardForPile.CardValue == (CardValue)13)
+                    {
+                        var cardsFound = this.PlayPiles[i].GetRange(0, 13);
+                        this.PlayPiles[i].Clear();
+
+                        return createDiscardPile(cardsFound, discardPile);
+                    }
                 }
+                
             }
 
             return null;
         }
 
-        public List<PileCard> CardForPile { get; private set; }
+        public List<List<Card>> PlayPiles { get; private set; }
 
-        protected DiscardPile createDiscardPile(List<PileCard> cardsForDiscard, DiscardPile discardPile)
+        protected DiscardPile createDiscardPile(List<Card> cardsForDiscard, DiscardPile discardPile)
         {
             List<Card> cardsToDiscrad = new List<Card>();
 
             for (var i = 0; i < cardsForDiscard.Count; i++)
             {
-                cardsToDiscrad.Add(cardsForDiscard[i].Card);
+                cardsToDiscrad.Add(cardsForDiscard[i]);
             }
 
             discardPile.addCardsToDiscardPile(cardsToDiscrad);

@@ -20,6 +20,20 @@ namespace Shikana.Game.Logic.Test.Players.StoragePiles
         }
 
         [Test]
+        public void invalidStoragePile()
+        {
+            void invalidPile()
+            {
+                Card card = new Card((CardSuite)1, (CardValue)1);
+                Storage storage = new Storage();
+                storage.addCardToPile(card, (Piles)999);
+
+            }
+
+            Assert.Throws(typeof(InvalidStoragePileException), invalidPile);
+        }
+
+        [Test]
         public void testCardForPileIsValid()
         {
             Deck deck = new Deck();
