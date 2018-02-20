@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shikana.Cards.Test", "Shika
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shikana.Game.Logic", "Shikana.Game.Logic\Shikana.Game.Logic.csproj", "{BDDE8676-50FF-4C2C-AE2C-206F6A9607A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shikana.Game.Logic.Test", "Shikana.Game.Logic.Test\Shikana.Game.Logic.Test.csproj", "{59678C25-B3FB-421B-A052-0DF48395FDE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shikana.Game.Logic.Test", "Shikana.Game.Logic.Test\Shikana.Game.Logic.Test.csproj", "{59678C25-B3FB-421B-A052-0DF48395FDE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shikana.Server", "Shikana.Server\Shikana.Server.csproj", "{B8DC0308-0D56-426F-99DD-02C8C8E5B0AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shikana.Game.Client", "Shikana.Game.Client\Shikana.Game.Client.csproj", "{C84D28D1-B080-4EFF-BF90-11A83725A6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{59678C25-B3FB-421B-A052-0DF48395FDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59678C25-B3FB-421B-A052-0DF48395FDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59678C25-B3FB-421B-A052-0DF48395FDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8DC0308-0D56-426F-99DD-02C8C8E5B0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DC0308-0D56-426F-99DD-02C8C8E5B0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DC0308-0D56-426F-99DD-02C8C8E5B0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DC0308-0D56-426F-99DD-02C8C8E5B0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84D28D1-B080-4EFF-BF90-11A83725A6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84D28D1-B080-4EFF-BF90-11A83725A6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84D28D1-B080-4EFF-BF90-11A83725A6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84D28D1-B080-4EFF-BF90-11A83725A6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
